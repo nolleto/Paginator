@@ -45,6 +45,7 @@
     <Compile Include="Extend.cs" />
     <Compile Include="Models\Page.cs" />
     <Compile Include="Defaults.cs" />
+    <Compile Include="Models\PageRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

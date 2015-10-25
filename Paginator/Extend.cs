@@ -16,6 +16,11 @@ namespace System.Linq
             return Page(query, Defaults.Index, Defaults.PageLength);
         }
 
+        public static Page<TModel> Page<TModel>(this IOrderedQueryable<TModel> query, PageRequest pageRequest)
+        {
+            return Page(query, pageRequest.Index, pageRequest.Length);
+        }
+
         public static Page<TModel> Page<TModel>(this IOrderedQueryable<TModel> query, int index)
         {
             return Page(query, index, Defaults.PageLength);
@@ -44,6 +49,11 @@ namespace System.Linq
         public static Page<TModel> Page<TModel, TKey>(this IQueryable<TModel> query, Expression<Func<TModel, TKey>> orderBy)
         {
             return Page(query, orderBy, Defaults.Index, Defaults.PageLength);
+        }
+
+        public static Page<TModel> Page<TModel, TKey>(this IQueryable<TModel> query, Expression<Func<TModel, TKey>> orderBy, PageRequest pageRequest)
+        {
+            return Page(query, orderBy, pageRequest.Index, pageRequest.Length);
         }
 
         public static Page<TModel> Page<TModel, TKey>(this IQueryable<TModel> query, Expression<Func<TModel, TKey>> orderBy, int index)
