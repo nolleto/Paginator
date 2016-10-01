@@ -29,20 +29,20 @@ namespace System.Linq
         public static Page<TModel> Page<TModel>(this IOrderedQueryable<TModel> query, int index, int pageLength)
         {
             int count = 0;
-            TModel[] itens;
+            TModel[] items;
             IQueryable<TModel> q;
 
             count = query.Count();
             q = query.Skip((index - 1) * pageLength)
                 .Take(pageLength);
-            itens = q.ToArray();
+            items = q.ToArray();
 
             return new Page<TModel>()
             {
                 Index = index,
                 Length = pageLength,
                 Count = count,
-                Itens = itens
+                Items = items
             };
         }
 
@@ -64,20 +64,20 @@ namespace System.Linq
         public static Page<TModel> Page<TModel, TKey>(this IQueryable<TModel> query, Expression<Func<TModel, TKey>> orderBy, int index, int pageLength)
         {
             int count = 0;
-            TModel[] itens;
+            TModel[] items;
 
             count = query.Count();
             query = query.OrderBy(orderBy)
                 .Skip((index - 1) * pageLength)
                 .Take(pageLength);
-            itens = query.ToArray();
+            items = query.ToArray();
 
             return new Page<TModel>()
             {
                 Index = index,
                 Length = pageLength,
                 Count = count,
-                Itens = itens
+                Items = items
             };
         }
     }

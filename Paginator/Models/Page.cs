@@ -8,7 +8,7 @@ namespace Paginator.Models
 {
     public class Page<TModel>
     {
-        public TModel[] Itens { get; set; }
+        public TModel[] Items { get; set; }
         public int Index { get; set; }
         public int Length { get; set; }
         public int Count { get; set; }
