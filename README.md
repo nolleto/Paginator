@@ -16,7 +16,7 @@ using (var db = new MyDearDatabase())
   page.Index //Current index
   page.Length //Current page length
   page.Count //Total of users
-  page.Itens //Array of users
+  page.Items //Array of users
 }
 ```
 
