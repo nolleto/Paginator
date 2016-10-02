@@ -2,6 +2,7 @@ language: csharp
 solution: Paginator.sln
 install:
   - sudo apt-get install nunit-console
+  - nuget restore Paginator.sln
  
 script:
   - xbuild Paginator.sln
