@@ -5,5 +5,5 @@ install:
   - nuget restore Paginator.sln
  
 script:
-  - xbuild Paginator.sln
+  - xbuild /p:Configuration=Release Paginator.sln
   - nunit-console UnitTest\bin\Release\UnitTest.dll
