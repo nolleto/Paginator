@@ -1,3 +1,5 @@
+![alt tag](https://travis-ci.org/nolleto/Paginator.svg?branch=master)
+
 # Paginator
 Simple paginator for Linq (EF)
 
