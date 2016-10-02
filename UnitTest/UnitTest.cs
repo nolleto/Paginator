@@ -1,14 +1,14 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
+using System;
 using System.Linq;
 
 namespace UnitTest
 {
-    [TestClass]
+    [TestFixture]
     public class UnitTest
     {
 
-        [TestMethod]
+        [Test]
         public void TestPageIndex()
         {
             var persons = Person.Get().AsQueryable();
@@ -22,7 +22,7 @@ namespace UnitTest
             Assert.AreEqual(page1.Items[0].Name, "Jesenia");
         }
 
-        [TestMethod]
+        [Test]
         public void TestPageLength()
         {
             var persons = Person.Get().AsQueryable();
@@ -48,7 +48,7 @@ namespace UnitTest
             }
         }
 
-        [TestMethod]
+        [Test]
         public void TestOrderBy()
         {
             var persons = Person.Get().AsQueryable();
@@ -66,7 +66,7 @@ namespace UnitTest
             Assert.AreEqual(page.Items[9].Name, "Jerrell");
         }
 
-        [TestMethod]
+        [Test]
         public void TestCount()
         {
             var persons = Person.Get().AsQueryable();
