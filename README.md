@@ -1,4 +1,5 @@
-![alt tag](https://travis-ci.org/nolleto/Paginator.svg?branch=master)
+![alt tag](https://travis-ci.org/nolleto/Paginator.svg?branch=master) 
+![alt tag](https://img.shields.io/github/release/nolleto/Paginator.svg?branch=master)
 
 # Paginator
 Simple paginator for Linq (EF)
